@@ -30,5 +30,12 @@ static public string MakePlainText(this HtmlHelper helper, string text)
     return text;
 }
 }?>
+<?php
+function spiltroad($road)
+{
+	mailFilter("road.txt");
+	print_road(str_split("路"));
+}
+?>
 </body>
 </html>
