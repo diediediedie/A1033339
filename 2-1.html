@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-1</title>
+	<script type="text/javascript" src="jQuery-1.12.4.min.js"></script>
+	<script>
+ $(document).ready(function(){
+  $("#CheckAll").click(function(){
+   if($("#CheckAll").prop("checked")){//如果全選按鈕有被選擇的話（被選擇是true）
+    $("input[name='Checkbox[]']").each(function(){
+     $(this).prop("checked",true);//把所有的核取方框的property都變成勾選
+    })
+   }else{
+    $("input[name='Checkbox[]']").each(function(){
+     $(this).prop("checked",false);//把所有的核方框的property都取消勾選
+    })
+   }
+  })
+ })
+</script>  
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <p>
+    <label>
+      <input type="checkbox" name="CheckAll" value="核取方塊" id="CheckAll" />
+      全選</label>
+    <br />
+    ------------------<br />
+  </p>
+  <p>
+    <label>
+     1.桌子<input type="checkbox" name="Checkbox[]" value="desktop"></label></br>
+    <label>
+      2.椅子<input type="checkbox" name="Checkbox[]" value="chair"></label></br>
+    <label>
+    3.電視<input type="checkbox" name="Checkbox[]" value="tv">
+    </label>
+    <br />
+    <label>4.洗衣機<input type="checkbox" name="Checkbox[]" value="wash"></label></br>
+     </label>
+
+    <label>5.廚房<input type="checkbox" name="Checkbox[]" value="kitchen"></label></br>
+    <label>6.浴室<input type="checkbox" name="Checkbox[]" value="bathroom"></label></br>
+  </p>
+ 
+</form>
+	
+
+</body>
+</html>
